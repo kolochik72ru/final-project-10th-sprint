@@ -21,7 +21,7 @@ touch dir2/empty
 # #!/bin/bash
 # echo "$1, привет!"
 
-echo '#!bin/bash' > hello1.sh | echo '$1, привет!' > hello2.sh | cat hello1.sh hello2.sh > hello.sh | rm hello1.sh hello2.sh
+echo '#!bin/bash' > hello.sh | echo '$1, привет!' >> hello.sh
 
 # устанавливаем для task/dir2/hello.sh права rwxrw-r--
 
@@ -46,7 +46,7 @@ cat dir2/list.txt >> dir1/summary.txt
 
 # определяем переменную окружения NAME со значением "Всем студентам"
 
-NAME='Всемстудентам'
+NAME='Всем студентам'
 
 # запускаем task/dir2/hello.sh с переменной окружения NAME в качестве аргумента
 # вывод скрипта должен дописаться в файл task/dir1/summary.txt
